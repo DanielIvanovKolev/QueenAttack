@@ -53,25 +53,25 @@ void canAttack(int* arr, int n, int rowA, int rowB, int columnA, int columnB) {
     cout << "\n\n\nThe White Queen is in: [" << rowA << "," << columnA << "]" << endl;
     cout << "\nThe Black Queen is in: [" << rowB << "," << columnB << "]" << endl;
 
-    // First if checks if the queens can attack eachself diagonally
-    // The two else if - checks if the queens can attack eachself horizontally
+    // First if checks if the queens can attack one another diagonally
+    // The two else if - checks if the queens can attack one another horizontally
     // and vertically , through a function called searchHor and searchVer
     // For the first if we use (|x1-x2|=|y1-y2|) statement!
     if (abs((rowA - rowB)) == abs((columnA - columnB))) {
-        cout << "\n\n\nThe Queens can attack eachself diagonally!" << endl;
+        cout << "\n\n\nThe Queens can attack one another diagonally!" << endl;
         return;
     }
     else if (searchHor(rowA, j, n, arr)) {
-        cout << "\n\n\nThe Queens can attack eachself horizontally!" << endl;
+        cout << "\n\n\nThe Queens can attack one another horizontally!" << endl;
         return; // We have an empty return in the void function to call it 
                 //stop it when one of the 3 conditions are true
     }
     else if (searchVer(columnA, i, n, arr)) {
-        cout << "\n\n\nThe Queens can attack eachself vertically!" << endl;
+        cout << "\n\n\nThe Queens can attack one another vertically!" << endl;
         return;
     }
     else {
-        cout << "\n\n\nThe Queens cannot attack eachself!" << endl;
+        cout << "\n\n\nThe Queens cannot attack one another!" << endl;
     }
 
 }
