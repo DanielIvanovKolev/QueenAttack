@@ -63,8 +63,8 @@ void canAttack(int* arr, int n, int rowA, int rowB, int columnA, int columnB) {
     }
     else if (searchHor(rowA, j, n, arr)) {
         cout << "\n\n\nThe Queens can attack one another horizontally!" << endl;
-        return; // We have an empty return in the void function to call it 
-                //stop it when one of the 3 conditions are true
+        return; 
+         
     }
     else if (searchVer(columnA, i, n, arr)) {
         cout << "\n\n\nThe Queens can attack one another vertically!" << endl;
